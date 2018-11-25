@@ -16,3 +16,21 @@
 .nav-item {
   font-size: 16px;
 }
+
+#basic-nav-dropdown {
+  /* position: relative; */
+}
+
+.dropdown-menu {
+  /* width: 350px; */
+  width: 450px;
+  /* position: absolute; */
+  top: 51px;
+  left: 0px !important;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dropdown-menu li {
+  flex: 1 50%;
+}
