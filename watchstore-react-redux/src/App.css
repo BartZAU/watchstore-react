@@ -18,19 +18,24 @@
 }
 
 #basic-nav-dropdown {
-  /* position: relative; */
+  position: relative;
+}
+
+.dropdown {
+  font-size: 16px;
 }
 
 .dropdown-menu {
-  /* width: 350px; */
-  width: 450px;
-  /* position: absolute; */
-  top: 51px;
-  left: 0px !important;
-  display: flex;
-  flex-wrap: wrap;
+  width: 500px;
+  position: absolute;
+  top: 55px;
 }
 
-.dropdown-menu li {
-  flex: 1 50%;
+.nav-item {
+  margin: 0 5px 5px 5px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: inherit;
 }
