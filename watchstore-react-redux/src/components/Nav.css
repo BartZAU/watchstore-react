@@ -13,6 +13,10 @@
   font-size: 20px;
 }
 
+.navbar-inverse {
+  background-color: #000;
+}
+
 .nav-item {
   font-size: 16px;
 }
@@ -29,6 +33,15 @@
   width: 500px;
   position: absolute;
   top: 55px;
+  background-color: #000;
+}
+
+.dropdown-menu li.nav-item {
+  color: #9d9d9d;
+}
+
+.dropdown-menu li.nav-item:hover {
+  color: #fff;
 }
 
 #navbar {
@@ -37,7 +50,7 @@
 }
 
 .nav-item {
-  margin: 0 5px 5px 0px;
+  margin: 0 5px 5px 5px;
 }
 
 .nav-item a {
