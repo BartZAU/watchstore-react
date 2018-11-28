@@ -1,0 +1,18 @@
+.section-info-header {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.section-info-header p.lead:after {
+  display: block;
+  height: 2px;
+  background-color: #808080;
+  content: " ";
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.section-info-header .lead {
+  color: #808080;
+}
