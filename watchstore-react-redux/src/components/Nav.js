@@ -12,7 +12,8 @@ import {
   FormControl,
   Button,
   Row,
-  Col
+  Col,
+  Glyphicon
 } from "react-bootstrap";
 
 class NavMain extends Component {
@@ -133,12 +134,13 @@ class NavMain extends Component {
                     onChange={this.onInputChange}
                   />
                 </FormGroup>
+
                 <Button
                   type="submit"
                   bsSize="small"
                   onClick={this.buttonFormSubmitClicked}
                 >
-                  Submit
+                  <Glyphicon glyph="glyphicon glyphicon-search" />
                 </Button>
               </Navbar.Form>
             </NavItem>

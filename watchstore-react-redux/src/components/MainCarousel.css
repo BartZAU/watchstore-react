@@ -1,5 +1,5 @@
 .carousel .item {
-  height: 385px;
+  height: 425px;
 }
 
 #item-1 {
@@ -9,17 +9,38 @@
 }
 
 #item-2 {
-  background: url("./img/carousel-img-1.jpeg");
+  background: url("./img/carousel-img-5.jpeg");
   background-size: cover;
-  background-position-y: 50%;
+  background-position-y: 30%;
 }
 
 #item-3 {
-  background: url("./img/carousel-img-1.jpeg");
+  background: url("./img/carousel-img-4.jpeg");
   background-size: cover;
   background-position-y: 50%;
 }
 
 .carousel-inner > .item > img {
   margin: 0 auto;
+}
+
+#item-caption-1 {
+  text-align: left;
+  position: absolute;
+  bottom: 50px;
+  font-size: 20px;
+}
+
+#item-caption-2 {
+  text-align: left;
+  position: absolute;
+  bottom: 50px;
+  font-size: 20px;
+}
+
+#item-caption-3 {
+  text-align: right;
+  position: absolute;
+  bottom: 50px;
+  font-size: 20px;
 }
