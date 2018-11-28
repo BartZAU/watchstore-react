@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+
 import NavMain from "./components/Nav";
+import MainCarousel from "./components/MainCarousel";
 
 import "./App.css";
 
@@ -18,6 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavMain onTermSubmit={this.onTermSubmit} />
+        <MainCarousel />
       </div>
     );
   }
