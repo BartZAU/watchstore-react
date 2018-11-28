@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "frankMuller": [
+        {
+          "id": 1,
+          "name": "first",
+          "price": 35
+        },
+        {
+          "id": 2,
+          "name": "two",
+          "price": 50
+        },
+        {
+          "id": 3,
+          "name": "three",
+          "price": 60
+        }
+      ],
+      "otherBrand": [
+        {
+          "id": 11,
+          "name": "32323",
+          "price": 35
+        },
+        {
+          "id": 22,
+          "name": "tw444o",
+          "price": 50
+        },
+        {
+          "id": 33,
+          "name": "44",
+          "price": 60
+        }
+      ]
+    }
+  ]
+}
