@@ -11,9 +11,9 @@ import {
   FormGroup,
   FormControl,
   Button,
+  Glyphicon,
   Row,
-  Col,
-  Glyphicon
+  Col
 } from "react-bootstrap";
 
 class NavMain extends Component {
@@ -92,29 +92,24 @@ class NavMain extends Component {
               <Row className="show-grid">
                 <Col xs={6}>
                   <MenuItem eventKey={3.1} className="nav-item">
-                    <img src="https://via.placeholder.com/30" alt="" /> Action
+                    <img src="https://via.placeholder.com/30" alt="" /> Brand 1
                   </MenuItem>
                   <MenuItem eventKey={3.2} className="nav-item">
-                    <img src="https://via.placeholder.com/30" alt="" /> Another
-                    action
+                    <img src="https://via.placeholder.com/30" alt="" /> Brand 2
                   </MenuItem>
                   <MenuItem eventKey={3.3} className="nav-item">
-                    <img src="https://via.placeholder.com/30" alt="" />{" "}
-                    Something else here
+                    <img src="https://via.placeholder.com/30" alt="" /> Brand 3
                   </MenuItem>
                 </Col>
                 <Col xs={6}>
                   <MenuItem eventKey={3.4} className="nav-item">
-                    <img src="https://via.placeholder.com/30" alt="" /> Another
-                    action
+                    <img src="https://via.placeholder.com/30" alt="" /> Brand 4
                   </MenuItem>
                   <MenuItem eventKey={3.5} className="nav-item">
-                    <img src="https://via.placeholder.com/30" alt="" /> Another
-                    action
+                    <img src="https://via.placeholder.com/30" alt="" /> Brand 5
                   </MenuItem>
                   <MenuItem eventKey={3.6} className="nav-item">
-                    <img src="https://via.placeholder.com/30" alt="" /> Another
-                    action
+                    <img src="https://via.placeholder.com/30" alt="" /> Brand 6
                   </MenuItem>
                 </Col>
               </Row>

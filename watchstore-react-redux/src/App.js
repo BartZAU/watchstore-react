@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import NavMain from "./components/Nav";
 import MainCarousel from "./components/MainCarousel";
+import WatchList from "./components/WatchList";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ class App extends Component {
       <div className="App">
         <NavMain onTermSubmit={this.onTermSubmit} />
         <MainCarousel />
+        <WatchList />
       </div>
     );
   }
