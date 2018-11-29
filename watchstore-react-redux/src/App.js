@@ -26,8 +26,25 @@ class App extends Component {
     console.log(this.state.term);
   };
 
-  handleAddCartItem = item => {
-    console.log(item);
+  handleAddCartItem = addedItem => {
+    let index = this.state.cart.findIndex(el => el.item === addedItem);
+
+    if (index == -1) {
+      // [...state, action.event]
+      console.log(false);
+    } else {
+      console.log(true);
+    }
+
+    this.setState(prevState => ({
+      cart: [
+        ...prevState.cart,
+        {
+          item: addedItem,
+          price: 0
+        }
+      ]
+    }));
   };
 
   render() {
