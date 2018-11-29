@@ -5,17 +5,20 @@
         {
           "id": 1,
           "name": "first",
-          "price": 35
+          "price": 35,
+          "imgSrc": "fm_8880.jpg"
         },
         {
           "id": 2,
           "name": "two",
-          "price": 50
+          "price": 50,
+          "imgSrc": "fm_8888.jpg"
         },
         {
           "id": 3,
           "name": "three",
-          "price": 60
+          "price": 60,
+          "imgSrc": "fm_vanguard_yachting.jpg"
         }
       ],
       "otherBrand": [
