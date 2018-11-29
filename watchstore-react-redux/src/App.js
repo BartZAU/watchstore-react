@@ -4,6 +4,8 @@ import NavMain from "./components/Nav";
 import MainCarousel from "./components/MainCarousel";
 import WatchList from "./components/WatchList";
 
+import data from "./data/products.json";
+
 import "./App.css";
 
 class App extends Component {
@@ -23,7 +25,10 @@ class App extends Component {
         <NavMain onTermSubmit={this.onTermSubmit} />
         <MainCarousel />
 
-        <WatchList />
+        <WatchList
+          watchList={data.products[0].frankMuller}
+          headerInfo={data.brandHeaderInfo.frankMullerHeadInfo}
+        />
       </div>
     );
   }

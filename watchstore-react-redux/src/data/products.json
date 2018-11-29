@@ -1,41 +1,37 @@
 {
+  "brandHeaderInfo": {
+    "frankMullerHeadInfo": "Franck Muller is world-famous for its Grand Complications and Luxury watches. Discover all the Franck Muller Haute Horlogerie timepieces."
+  },
   "products": [
     {
       "frankMuller": [
         {
           "id": 1,
-          "name": "first",
+          "brand": "Franck Muller",
+          "name": "Vanguard 8880",
           "price": 35,
           "imgSrc": "fm_8880.jpg"
         },
         {
           "id": 2,
-          "name": "two",
+          "brand": "Franck Muller",
+          "name": "Vanguard 8888",
           "price": 50,
           "imgSrc": "fm_8888.jpg"
         },
         {
           "id": 3,
-          "name": "three",
+          "brand": "Franck Muller",
+          "name": "Vanguard 50",
           "price": 60,
           "imgSrc": "fm_vanguard_yachting.jpg"
-        }
-      ],
-      "otherBrand": [
-        {
-          "id": 11,
-          "name": "32323",
-          "price": 35
         },
         {
-          "id": 22,
-          "name": "tw444o",
-          "price": 50
-        },
-        {
-          "id": 33,
-          "name": "44",
-          "price": 60
+          "id": 4,
+          "brand": "Franck Muller",
+          "name": "Vanguard YT75",
+          "price": 60,
+          "imgSrc": "fm_v50.jpg"
         }
       ]
     }
