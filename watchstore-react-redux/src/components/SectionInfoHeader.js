@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Col, Row, Image, Thumbnail } from "react-bootstrap";
+import { Grid, Col } from "react-bootstrap";
 
 import "./SectionInfoHeader.css";
 

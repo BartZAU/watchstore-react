@@ -1,11 +1,13 @@
 import React from "react";
-import { Grid, Col, Row, Image, Thumbnail, Button } from "react-bootstrap";
+import { Col, Thumbnail, Button } from "react-bootstrap";
+
+import "./WatchItem.css";
 
 const WatchItem = props => {
   console.log(props);
   return (
     <Col xs={6} md={4}>
-      <Thumbnail src={props.imgSrc} alt={props.name}>
+      <Thumbnail className="card-img" src={props.imgSrc} alt={props.name}>
         <h3>{props.name}</h3>
         <p>description</p>
         <p>{`$${props.price.toFixed(2)}`}</p>
