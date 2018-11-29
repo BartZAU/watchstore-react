@@ -15,7 +15,8 @@ class App extends Component {
     cart: [
       {
         item: "",
-        price: 0
+        price: 0,
+        quantity: 0
       }
     ]
   };
@@ -26,25 +27,40 @@ class App extends Component {
     console.log(this.state.term);
   };
 
-  handleAddCartItem = addedItem => {
+  handleAddCartItem = (addedItem, addedItemPrice) => {
+    // check if already in cart
     let index = this.state.cart.findIndex(el => el.item === addedItem);
 
     if (index == -1) {
-      // [...state, action.event]
-      console.log(false);
+      console.log("item new to cart");
+      this.setState(prevState => ({
+        cart: [
+          ...prevState.cart,
+          {
+            item: addedItem,
+            price: addedItemPrice,
+            quantity: 1
+          }
+        ]
+      }));
     } else {
-      console.log(true);
-    }
+      console.log("already in cart update quantity");
 
-    this.setState(prevState => ({
-      cart: [
-        ...prevState.cart,
-        {
-          item: addedItem,
-          price: 0
-        }
-      ]
-    }));
+      // this.setState(prevState => ({
+      //   cart: [
+      //     ...prevState.cart,
+      //     {
+      //       item: addedItem,
+      //       price: addedItemPrice,
+      //       quantity: (prevState.cart[index].quantity += 1)
+      //     }
+      //   ]
+      // }));
+
+      this.setState(prevState => ({
+        quantity: (prevState.cart[index].quantity += 1)
+      }));
+    }
   };
 
   render() {

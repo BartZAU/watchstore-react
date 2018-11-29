@@ -5,7 +5,7 @@ import "./WatchItem.css";
 
 class WatchItem extends React.Component {
   handleClick = e => {
-    this.props.addCartItem(this.props.name);
+    this.props.addCartItem(this.props.name, this.props.price);
   };
 
   render() {
