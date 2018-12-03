@@ -22,7 +22,11 @@ class WatchItem extends React.Component {
             <p>{this.props.description}</p>
             <p>{`$${this.props.price.toFixed(2)}`}</p>
           </div>
-
+          <img
+            className="added-to-cart"
+            src="./img/products/cart.svg"
+            alt="cart"
+          />
           <Button onClick={this.handleClick} bsStyle="default">
             Add to cart
           </Button>

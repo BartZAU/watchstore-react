@@ -17,3 +17,10 @@
   text-align: left;
   padding: 0 2rem;
 }
+
+.thumbnail .added-to-cart {
+  width: 40px;
+  position: absolute;
+  top: -45px;
+  left: 30px;
+}
