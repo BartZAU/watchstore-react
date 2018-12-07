@@ -21,10 +21,12 @@ class App extends Component {
     ]
   };
 
+  componentDidMount() {}
+
+  componentDidUpdate(prevPops, prevState) {}
+
   onTermSubmit = term => {
-    console.log(term);
     this.setState({ term: term });
-    console.log(this.state.term);
   };
 
   handleAddCartItem = (addedItem, addedItemPrice) => {
@@ -54,10 +56,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavMain onTermSubmit={this.onTermSubmit} />
+        <NavMain
+          onTermSubmit={this.onTermSubmit}
+          handleSearched={this.handleSearched}
+        />
         <MainCarousel />
 
         <WatchList
+          searchTerm={this.state.term}
           addCartItem={this.handleAddCartItem}
           watchList={data.products[0].frankMuller}
           headerInfo={data.brandHeaderInfo.frankMullerHeadInfo}
