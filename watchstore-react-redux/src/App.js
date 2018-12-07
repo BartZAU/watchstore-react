@@ -16,7 +16,8 @@ class App extends Component {
       {
         item: "",
         price: 0,
-        quantity: 0
+        quantity: 0,
+        isInCart: false
       }
     ]
   };
@@ -40,7 +41,8 @@ class App extends Component {
           {
             item: addedItem,
             price: addedItemPrice,
-            quantity: 1
+            quantity: 1,
+            isInCart: true
           }
         ]
       }));
@@ -63,6 +65,7 @@ class App extends Component {
         <MainCarousel />
 
         <WatchList
+          cart={this.state.cart}
           searchTerm={this.state.term}
           addCartItem={this.handleAddCartItem}
           watchList={data.products[0].frankMuller}

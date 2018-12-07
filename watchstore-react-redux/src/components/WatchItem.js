@@ -4,16 +4,12 @@ import { Col, Thumbnail, Button } from "react-bootstrap";
 import "./WatchItem.css";
 
 class WatchItem extends React.Component {
-  state = {
-    isInCart: false
-  };
-
   handleClick = e => {
     this.props.addCartItem(this.props.name, this.props.price);
-    this.setState({ isInCart: true });
   };
 
   render() {
+    // console.log(this.props);
     // console.log(this.props);
     // console.log(this.props);
     return (
@@ -28,7 +24,7 @@ class WatchItem extends React.Component {
             <p>{this.props.description}</p>
             <p>{`$${this.props.price.toFixed(2)}`}</p>
           </div>
-          {this.state.isInCart ? (
+          {this.props.isInCart ? (
             <img
               className="added-to-cart"
               src="./img/products/cart.svg"

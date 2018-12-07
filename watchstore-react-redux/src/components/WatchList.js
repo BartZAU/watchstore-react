@@ -7,10 +7,21 @@ import SectionInfoHeader from "./SectionInfoHeader";
 import "./WatchList.css";
 
 export default class WatchList extends Component {
+  isInCart = watchName => {
+    const hasMatch = this.props.cart.find(watch => watch.item === watchName);
+    if (hasMatch) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   render() {
     // console.log(this.props.watchList[0].brand);
     // console.log(this.props.searchTerm);
     // console.log(this.props);
+
+    // console.log(this.props.cart);
 
     return (
       <React.Fragment>
@@ -28,6 +39,7 @@ export default class WatchList extends Component {
               )
               .map(watch => (
                 <WatchItem
+                  isInCart={this.isInCart(watch.name)}
                   key={watch.id.toString()}
                   id={watch.id}
                   brand={watch.brand}
