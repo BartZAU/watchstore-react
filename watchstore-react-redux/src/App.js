@@ -16,19 +16,36 @@ class App extends Component {
       {
         item: "",
         price: 0,
-        quantity: 0,
-        isInCart: false
+        quantity: 0
       }
     ]
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    try {
+      const json = localStorage.getItem("cart");
+      const cart = JSON.parse(json);
 
-  componentDidUpdate(prevPops, prevState) {}
+      if (cart) {
+        this.setState(() => ({ cart: cart }));
+      }
+    } catch (error) {
+      // do nothing
+    }
+  }
+
+  componentDidUpdate(prevPops, prevState) {
+    if (prevState.cart.length !== this.state.cart.length) {
+      const json = JSON.stringify(this.state.cart);
+      localStorage.setItem("cart", json);
+    }
+  }
 
   onTermSubmit = term => {
     this.setState({ term: term });
   };
+
+  // need to add a remove item from cart
 
   handleAddCartItem = (addedItem, addedItemPrice) => {
     // check if already in cart
@@ -41,8 +58,7 @@ class App extends Component {
           {
             item: addedItem,
             price: addedItemPrice,
-            quantity: 1,
-            isInCart: true
+            quantity: 1
           }
         ]
       }));
