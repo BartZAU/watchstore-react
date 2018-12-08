@@ -14,7 +14,7 @@ export default class WatchList extends Component {
     // console.log(this.props.cart);
     // console.log(this.props.watchList[0].brand);
     // console.log(this.props.searchTerm);
-    // console.log(this.props);
+    console.log(this.props);
 
     // console.log(this.props.cart);
 

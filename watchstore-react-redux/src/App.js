@@ -72,9 +72,6 @@ class App extends Component {
     }
   };
 
-  // 	const array1 = [1, 2, 3, 4];
-  // 	const reducer = (accumulator, currentValue) => accumulator + currentValue;
-
   render() {
     const arrayOfQuantities = this.state.cart.map(item => item.quantity);
     const countOfCartItems = arrayOfQuantities.reduce(
