@@ -76,9 +76,10 @@ class App extends Component {
     return (
       <div className="App">
         <NavMain
+          countOfCartItems={this.state.cart.length}
           onTermSubmit={this.onTermSubmit}
           handleSearched={this.handleSearched}
-          itemsInCart={this.state.cart.length > 0}
+          itemsInCartBoolean={this.state.cart.length > 1}
         />
         <MainCarousel />
 

@@ -58,6 +58,12 @@
   color: inherit;
 }
 
+.cart-badge {
+  margin-top: -10px;
+  font-size: 10px;
+  background-color: #28a745;
+}
+
 @media screen and (max-width: 800px) {
   .social {
     display: inline-block !important;

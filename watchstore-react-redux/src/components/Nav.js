@@ -13,7 +13,10 @@ import {
   Button,
   Glyphicon,
   Row,
-  Col
+  Col,
+  Tooltip,
+  OverlayTrigger,
+  Badge
 } from "react-bootstrap";
 
 class NavMain extends Component {
@@ -58,6 +61,22 @@ class NavMain extends Component {
         padding: "0px"
       }
     };
+
+    const badge = (
+      <Badge className="cart-badge">{this.props.countOfCartItems - 1}</Badge>
+    );
+
+    const tooltipEmpty = (
+      <Tooltip id="tooltip">
+        <p>Your cart is empty.</p>
+      </Tooltip>
+    );
+
+    const tooltipItemInCart = (
+      <Tooltip id="tooltip">
+        <p>Proceed to checkout.</p>
+      </Tooltip>
+    );
 
     return (
       <Navbar inverse collapseOnSelect id="navbar" fixedTop>
@@ -139,9 +158,28 @@ class NavMain extends Component {
                 </Button>
               </Navbar.Form>
             </NavItem>
-            <NavItem eventKey={2} href="#" className="nav-item">
-              Cart <span>$0.00</span> <i className="fas fa-shopping-cart" />
-            </NavItem>
+            <OverlayTrigger
+              placement="bottom"
+              overlay={
+                !this.props.itemsInCartBoolean
+                  ? tooltipEmpty
+                  : tooltipItemInCart
+              }
+            >
+              <NavItem eventKey={2} href="#" className="nav-item">
+                {/* Cart <span>$0.00</span> <i className="fas fa-shopping-cart" /> */}
+                {!this.props.itemsInCartBoolean ? `Cart` : ` Checkout`}
+                <i
+                  style={{
+                    fontSize: "17px",
+                    paddingLeft: "7px",
+                    paddingRight: "5px"
+                  }}
+                  className="fas fa-shopping-cart "
+                />
+                {!this.props.itemsInCartBoolean ? null : badge}
+              </NavItem>
+            </OverlayTrigger>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
