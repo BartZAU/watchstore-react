@@ -60,7 +60,7 @@ class NavMain extends Component {
     };
 
     return (
-      <Navbar inverse collapseOnSelect id="navbar">
+      <Navbar inverse collapseOnSelect id="navbar" fixedTop>
         <Navbar.Header>
           <Navbar.Brand id="brand">
             <a style={style.brand} href="#brand">

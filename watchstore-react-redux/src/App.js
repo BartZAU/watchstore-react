@@ -4,6 +4,7 @@ import NavMain from "./components/Nav";
 import MainCarousel from "./components/MainCarousel";
 import WatchList from "./components/WatchList";
 import ShoppingCart from "./components/ShoppingCart";
+import Checkout from "./components/Checkout";
 
 import data from "./data/products.json";
 
@@ -77,6 +78,7 @@ class App extends Component {
         <NavMain
           onTermSubmit={this.onTermSubmit}
           handleSearched={this.handleSearched}
+          itemsInCart={this.state.cart.length > 0}
         />
         <MainCarousel />
 
@@ -87,8 +89,6 @@ class App extends Component {
           watchList={data.products[0].frankMuller}
           headerInfo={data.brandHeaderInfo.frankMullerHeadInfo}
         />
-
-        <ShoppingCart />
       </div>
     );
   }
