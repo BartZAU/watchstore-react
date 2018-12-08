@@ -7,14 +7,8 @@ import SectionInfoHeader from "./SectionInfoHeader";
 import "./WatchList.css";
 
 export default class WatchList extends Component {
-  isInCart = watchName => {
-    const hasMatch = this.props.cart.find(watch => watch.item === watchName);
-    if (hasMatch) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  isInCart = watchName =>
+    !!this.props.cart.find(watch => watch.item === watchName);
 
   render() {
     console.log(this.props.cart);
