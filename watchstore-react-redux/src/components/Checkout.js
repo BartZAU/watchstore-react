@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import "./Checkout.css";
 import NavMain from "./Nav";
+import CustomForm from "./CustomForm";
 
 import {
   Button,
@@ -11,7 +12,9 @@ import {
   Grid,
   Row,
   Col,
-  Glyphicon
+  Glyphicon,
+  ListGroup,
+  ListGroupItem
 } from "react-bootstrap";
 
 export default class Checkout extends Component {
@@ -37,14 +40,22 @@ export default class Checkout extends Component {
                   <p>NSW</p>
                 </div>
               </Col>
+
               <Col xs={12} sm={6}>
                 <div className="checkout">
-                  <h5 className="sub-heading">SHIPPING DETAILS</h5>
+                  <h5 className="sub-heading">PAYMENT DETAILS</h5>
+                  <CustomForm />
+                </div>
+              </Col>
 
-                  <p>Lorem Ipsum</p>
-                  <p>101 Praesent laoreet St</p>
-                  <p>2222 Sydney</p>
-                  <p>NSW</p>
+              <Col xs={12}>
+                <div className="checkout">
+                  <h5 className="sub-heading">YOUR ORDER</h5>
+                  <ListGroup>
+                    <ListGroupItem>Item 1</ListGroupItem>
+                    <ListGroupItem>Item 2</ListGroupItem>
+                    <ListGroupItem>Item 3</ListGroupItem>
+                  </ListGroup>
                 </div>
               </Col>
             </Row>
