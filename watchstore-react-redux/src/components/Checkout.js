@@ -22,11 +22,14 @@ export default class Checkout extends Component {
         <section className="py-5">
           <Grid className="show-grid">
             <Row>
+              <Col xs={12}>
+                <h1 className="main-header">Checkout</h1>
+              </Col>
+            </Row>
+            <Row>
               <Col xs={12} sm={6}>
                 <div className="checkout">
-                  <h1>Checkout</h1>
                   <h5 className="sub-heading">SHIPPING DETAILS</h5>
-                  <hr className="hr-line" />
 
                   <p>Lorem Ipsum</p>
                   <p>101 Praesent laoreet St</p>
@@ -35,7 +38,14 @@ export default class Checkout extends Component {
                 </div>
               </Col>
               <Col xs={12} sm={6}>
-                {/* <h1>WEEE</h1> */}
+                <div className="checkout">
+                  <h5 className="sub-heading">SHIPPING DETAILS</h5>
+
+                  <p>Lorem Ipsum</p>
+                  <p>101 Praesent laoreet St</p>
+                  <p>2222 Sydney</p>
+                  <p>NSW</p>
+                </div>
               </Col>
             </Row>
           </Grid>

@@ -1,10 +1,17 @@
-.checkout {
+.main-header {
   padding-top: 50px;
+}
+
+.checkout {
+  /* padding-top: 50px; */
 }
 
 .sub-heading {
   color: #808080;
+  border-bottom: 1px solid #d3d3d3;
+  width: 80%;
   padding-top: 2rem;
+  padding-bottom: 10px;
 }
 
 p {
