@@ -63,7 +63,7 @@ class NavMain extends Component {
     };
 
     const badge = (
-      <Badge className="cart-badge">{this.props.countOfCartItems - 1}</Badge>
+      <Badge className="cart-badge">{this.props.countOfCartItems}</Badge>
     );
 
     const tooltipEmpty = (

@@ -11,7 +11,7 @@ export default class WatchList extends Component {
     !!this.props.cart.find(watch => watch.item === watchName);
 
   render() {
-    console.log(this.props.cart);
+    // console.log(this.props.cart);
     // console.log(this.props.watchList[0].brand);
     // console.log(this.props.searchTerm);
     // console.log(this.props);

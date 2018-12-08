@@ -72,11 +72,20 @@ class App extends Component {
     }
   };
 
+  // 	const array1 = [1, 2, 3, 4];
+  // 	const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
   render() {
+    const arrayOfQuantities = this.state.cart.map(item => item.quantity);
+    const countOfCartItems = arrayOfQuantities.reduce(
+      (total, current) => (total += current)
+    );
+
+    // console.log(`number of items ${countOfItems}`);
     return (
       <div className="App">
         <NavMain
-          countOfCartItems={this.state.cart.length}
+          countOfCartItems={countOfCartItems}
           onTermSubmit={this.onTermSubmit}
           handleSearched={this.handleSearched}
           itemsInCartBoolean={this.state.cart.length > 1}
