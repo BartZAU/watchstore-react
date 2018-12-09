@@ -52,10 +52,59 @@ export default class Checkout extends Component {
                 <div className="checkout">
                   <h5 className="sub-heading">YOUR ORDER</h5>
                   <ListGroup>
-                    <ListGroupItem>Item 1</ListGroupItem>
-                    <ListGroupItem>Item 2</ListGroupItem>
-                    <ListGroupItem>Item 3</ListGroupItem>
+                    <ListGroupItem>
+                      <Media>
+                        <Media.Left>
+                          <img
+                            width={90}
+                            height={90}
+                            src="https://i5.walmartimages.com/asr/0a99661e-e4f4-4212-910f-afbd44798433_1.848a6102262283c1b4bd0309358f71dd.jpeg?odnWidth=200&odnHeight=200&odnBg=ffffff"
+                            alt="thumbnail"
+                          />
+                        </Media.Left>
+                        <Media.Body>
+                          <p>
+                            <strong>Brand</strong>
+                          </p>
+                          <Row className="show-grid">
+                            <Col md={8}>Item: </Col>
+                            <Col md={8}>Qty: 1 </Col>
+                            <Col md={8}>Price: 0.00</Col>
+                          </Row>
+                        </Media.Body>
+                      </Media>
+                    </ListGroupItem>
                   </ListGroup>
+                </div>
+              </Col>
+
+              <Col xs={12}>
+                <div className="checkout-summary">
+                  <h5 className="sub-heading">PAYMENT SUMMARY</h5>
+                </div>
+                <div className="checkout-summary-wrapper">
+                  <div className="checkout-summary-prices">
+                    <p>
+                      <strong>Subtotal: </strong>
+                    </p>
+                    <p>
+                      <strong>Tax: </strong>
+                    </p>
+                    <p>
+                      <strong>Total: </strong>
+                    </p>
+                  </div>
+                  <div className="checkout-summary-prices">
+                    <p>
+                      <strong>0.00</strong>
+                    </p>
+                    <p>
+                      <strong>0.00</strong>
+                    </p>
+                    <p>
+                      <strong>0.00</strong>
+                    </p>
+                  </div>
                 </div>
               </Col>
             </Row>

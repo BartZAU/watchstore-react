@@ -2,10 +2,6 @@
   padding-top: 50px;
 }
 
-.checkout {
-  /* padding-top: 50px; */
-}
-
 .sub-heading {
   color: #808080;
   border-bottom: 1px solid #d3d3d3;
@@ -17,4 +13,25 @@
 
 p {
   font-size: 16px;
+}
+
+.list-group-item {
+  border-left: 0;
+  border-right: 0;
+}
+
+.media-left {
+  vertical-align: middle;
+}
+
+/* .checkout-summary-wrapper {
+  display: flex;
+} */
+
+.checkout-summary-prices {
+  display: inline-block;
+}
+
+.checkout-summary-prices + .checkout-summary-prices {
+  padding-left: 45px;
 }
