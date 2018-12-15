@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import NavMain from "./components/Nav";
 import MainCarousel from "./components/MainCarousel";
@@ -101,23 +102,32 @@ class App extends Component {
     console.log(this.state.totalPrice.toFixed(2));
     // console.log(`number of items ${countOfItems}`);
     return (
-      <div className="App">
-        <NavMain
-          countOfCartItems={countOfCartItems}
-          onTermSubmit={this.onTermSubmit}
-          handleSearched={this.handleSearched}
-          itemsInCartBoolean={this.state.cart.length > 1}
-        />
-        <MainCarousel />
-        <p>{this.state.totalPrice.toFixed(2)}</p>
-        <WatchList
-          cart={this.state.cart}
-          searchTerm={this.state.term}
-          addCartItem={this.handleAddCartItem}
-          watchList={data.products[0].frankMuller}
-          headerInfo={data.brandHeaderInfo.frankMullerHeadInfo}
-        />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <NavMain
+            countOfCartItems={countOfCartItems}
+            onTermSubmit={this.onTermSubmit}
+            handleSearched={this.handleSearched}
+            itemsInCartBoolean={this.state.cart.length > 1}
+          />
+          <MainCarousel />
+
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <WatchList
+                cart={this.state.cart}
+                searchTerm={this.state.term}
+                addCartItem={this.handleAddCartItem}
+                watchList={data.products[0].frankMuller}
+                headerInfo={data.brandHeaderInfo.frankMullerHeadInfo}
+              />
+            )}
+          />
+          <Route path="/checkout" render={() => <Checkout />} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
