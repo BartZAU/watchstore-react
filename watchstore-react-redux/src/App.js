@@ -19,16 +19,20 @@ class App extends Component {
         price: 0,
         quantity: 0
       }
-    ]
+    ],
+    totalPrice: 0
   };
 
   componentDidMount() {
     try {
-      const json = localStorage.getItem("cart");
-      const cart = JSON.parse(json);
+      const jsonCart = localStorage.getItem("cart");
+      const cart = JSON.parse(jsonCart);
+
+      const jsonTotalPrice = localStorage.getItem("totalPrice");
+      const totalPrice = JSON.parse(jsonTotalPrice);
 
       if (cart) {
-        this.setState(() => ({ cart: cart }));
+        this.setState(() => ({ cart: cart, totalPrice: totalPrice }));
       }
     } catch (error) {
       // do nothing
@@ -36,9 +40,16 @@ class App extends Component {
   }
 
   componentDidUpdate(prevPops, prevState) {
+    // if (prevState.cart.length !== this.state.cart.length) {
+    //   const json = JSON.stringify(this.state.cart);
+    //   localStorage.setItem("cart", json);
+    // }
+
     if (prevState.cart.length !== this.state.cart.length) {
-      const json = JSON.stringify(this.state.cart);
-      localStorage.setItem("cart", json);
+      const jsonCart = JSON.stringify(this.state.cart);
+      localStorage.setItem("cart", jsonCart);
+      const jsonTotalPrice = JSON.stringify(this.state.totalPrice);
+      localStorage.setItem("totalPrice", jsonTotalPrice);
     }
   }
 
@@ -61,13 +72,17 @@ class App extends Component {
             price: addedItemPrice,
             quantity: 1
           }
-        ]
+        ],
+        totalPrice: (prevState.totalPrice += addedItemPrice)
       }));
     } else {
       this.setState(prevState => {
         let newCart = [...prevState.cart];
         newCart[index].quantity += 1;
-        return { cart: newCart };
+        return {
+          cart: newCart,
+          totalPrice: (prevState.totalPrice += addedItemPrice)
+        };
       });
     }
   };
@@ -78,6 +93,12 @@ class App extends Component {
       (total, current) => (total += current)
     );
 
+    // const totalPrice = this.state.cart.map(item => item.price * item.quantity);
+    // const result = totalPrice.reduce((total, current) => (total += current));
+    // // console.log(this.state.cart);
+    // console.log(result);
+
+    console.log(this.state.totalPrice.toFixed(2));
     // console.log(`number of items ${countOfItems}`);
     return (
       <div className="App">
@@ -88,7 +109,7 @@ class App extends Component {
           itemsInCartBoolean={this.state.cart.length > 1}
         />
         <MainCarousel />
-
+        <p>{this.state.totalPrice.toFixed(2)}</p>
         <WatchList
           cart={this.state.cart}
           searchTerm={this.state.term}
