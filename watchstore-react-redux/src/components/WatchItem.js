@@ -5,13 +5,18 @@ import "./WatchItem.css";
 
 class WatchItem extends React.Component {
   handleClick = e => {
-    this.props.addCartItem(this.props.name, this.props.price);
+    this.props.addCartItem(
+      this.props.name,
+      this.props.price,
+      this.props.imgSrc,
+      this.props.brand
+    );
   };
 
   render() {
     // console.log(this.props);
     // console.log(this.props);
-    // console.log(this.props);
+
     return (
       <Col xs={6} md={4}>
         <Thumbnail

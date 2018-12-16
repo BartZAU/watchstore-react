@@ -50,6 +50,7 @@ class NavMain extends Component {
   };
 
   render() {
+    // console.log(this.props);
     const style = {
       brand: {
         fontSize: "25px"

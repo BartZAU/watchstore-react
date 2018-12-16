@@ -18,7 +18,9 @@ class App extends Component {
       {
         item: "",
         price: 0,
-        quantity: 0
+        quantity: 0,
+        imgSrc: "",
+        brand: ""
       }
     ],
     totalPrice: 0
@@ -40,18 +42,18 @@ class App extends Component {
     }
   }
 
-  componentDidUpdate(prevPops, prevState) {
+  componentDidUpdate(prevProps, prevState) {
     // if (prevState.cart.length !== this.state.cart.length) {
     //   const json = JSON.stringify(this.state.cart);
     //   localStorage.setItem("cart", json);
     // }
 
-    if (prevState.cart.length !== this.state.cart.length) {
-      const jsonCart = JSON.stringify(this.state.cart);
-      localStorage.setItem("cart", jsonCart);
-      const jsonTotalPrice = JSON.stringify(this.state.totalPrice);
-      localStorage.setItem("totalPrice", jsonTotalPrice);
-    }
+    // if (prevState.cart.length !== this.state.cart.length ) {
+    const jsonCart = JSON.stringify(this.state.cart);
+    localStorage.setItem("cart", jsonCart);
+    const jsonTotalPrice = JSON.stringify(this.state.totalPrice);
+    localStorage.setItem("totalPrice", jsonTotalPrice);
+    // }
   }
 
   onTermSubmit = term => {
@@ -60,7 +62,7 @@ class App extends Component {
 
   // need to add a remove item from cart
 
-  handleAddCartItem = (addedItem, addedItemPrice) => {
+  handleAddCartItem = (addedItem, addedItemPrice, imgSrc, brand) => {
     // check if already in cart
     let index = this.state.cart.findIndex(el => el.item === addedItem);
 
@@ -71,7 +73,9 @@ class App extends Component {
           {
             item: addedItem,
             price: addedItemPrice,
-            quantity: 1
+            quantity: 1,
+            imgSrc: imgSrc,
+            brand: brand
           }
         ],
         totalPrice: (prevState.totalPrice += addedItemPrice)
@@ -99,7 +103,7 @@ class App extends Component {
     // // console.log(this.state.cart);
     // console.log(result);
 
-    console.log(this.state.totalPrice.toFixed(2));
+    // console.log(this.state.totalPrice.toFixed(2));
     // console.log(`number of items ${countOfItems}`);
     return (
       <BrowserRouter>

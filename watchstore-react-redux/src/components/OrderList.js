@@ -14,19 +14,22 @@ import {
   ListGroupItem
 } from "react-bootstrap";
 
-const SectionInfoHeader = props => {
+const OrderList = props => {
   // console.log(props);
   return (
     <React.Fragment>
-      {props.cart.map(watch => (
+      {props.cart.slice(1).map(watch => (
         <OrderItem
           key={watch.item}
+          item={watch.item}
+          imgSrc={watch.imgSrc}
           price={watch.price}
           quantity={watch.quantity}
+          brand={watch.brand}
         />
       ))}
     </React.Fragment>
   );
 };
 
-export default SectionInfoHeader;
+export default OrderList;
