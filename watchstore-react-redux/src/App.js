@@ -110,22 +110,28 @@ class App extends Component {
             handleSearched={this.handleSearched}
             itemsInCartBoolean={this.state.cart.length > 1}
           />
-          <MainCarousel />
 
+          {/* <MainCarousel /> */}
           <Route
             exact
             path="/"
             render={() => (
-              <WatchList
-                cart={this.state.cart}
-                searchTerm={this.state.term}
-                addCartItem={this.handleAddCartItem}
-                watchList={data.products[0].frankMuller}
-                headerInfo={data.brandHeaderInfo.frankMullerHeadInfo}
-              />
+              <React.Fragment>
+                <MainCarousel />
+                <WatchList
+                  cart={this.state.cart}
+                  searchTerm={this.state.term}
+                  addCartItem={this.handleAddCartItem}
+                  watchList={data.products[0].frankMuller}
+                  headerInfo={data.brandHeaderInfo.frankMullerHeadInfo}
+                />
+              </React.Fragment>
             )}
           />
-          <Route path="/checkout" render={() => <Checkout />} />
+          <Route
+            path="/checkout"
+            render={() => <Checkout cart={this.state.cart} />}
+          />
         </div>
       </BrowserRouter>
     );

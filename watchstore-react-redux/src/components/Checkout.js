@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./Checkout.css";
 import NavMain from "./Nav";
 import CustomForm from "./CustomForm";
+import OrderList from "./OrderList";
 
 import {
   Button,
@@ -19,6 +20,7 @@ import {
 
 export default class Checkout extends Component {
   render() {
+    console.log(this.props);
     return (
       <div>
         <NavMain />
@@ -51,8 +53,9 @@ export default class Checkout extends Component {
               <Col xs={12}>
                 <div className="checkout">
                   <h5 className="sub-heading">YOUR ORDER</h5>
-                  <ListGroup>
-                    <ListGroupItem>
+
+                  {/* <ListGroup>
+									<ListGroupItem>
                       <Media>
                         <Media.Left>
                           <img
@@ -74,6 +77,10 @@ export default class Checkout extends Component {
                         </Media.Body>
                       </Media>
                     </ListGroupItem>
+									</ListGroup> */}
+
+                  <ListGroup>
+                    <OrderList cart={this.props.cart} />
                   </ListGroup>
                 </div>
               </Col>

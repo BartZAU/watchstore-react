@@ -64,6 +64,10 @@
   background-color: #28a745;
 }
 
+.submit-btn {
+  vertical-align: top;
+}
+
 @media screen and (max-width: 800px) {
   .social {
     display: inline-block !important;

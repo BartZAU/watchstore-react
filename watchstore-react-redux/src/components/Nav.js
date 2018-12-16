@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Nav.css";
 
@@ -99,9 +100,10 @@ class NavMain extends Component {
             </NavItem>
           </Nav>
           <Nav pullRight>
-            <NavItem eventKey={1} href="#" className="nav-item">
+            <NavItem eventKey={1} href="/" className="nav-item">
               Home
             </NavItem>
+
             <NavDropdown
               eventKey={3}
               title="Watches"
@@ -150,6 +152,7 @@ class NavMain extends Component {
                 </FormGroup>
 
                 <Button
+                  className="submit-btn"
                   type="submit"
                   bsSize="small"
                   onClick={this.buttonFormSubmitClicked}
@@ -166,7 +169,7 @@ class NavMain extends Component {
                   : tooltipItemInCart
               }
             >
-              <NavItem eventKey={2} href="#" className="nav-item">
+              <NavItem eventKey={2} href="/checkout" className="nav-item">
                 {/* Cart <span>$0.00</span> <i className="fas fa-shopping-cart" /> */}
                 {!this.props.itemsInCartBoolean ? `Cart` : ` Checkout`}
                 <i
