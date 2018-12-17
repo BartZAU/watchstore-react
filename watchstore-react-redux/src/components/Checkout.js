@@ -23,7 +23,6 @@ export default class Checkout extends Component {
     // console.log(this.props);
     return (
       <div>
-        <NavMain />
         <section className="py-5">
           <Grid className="show-grid">
             <Row>
