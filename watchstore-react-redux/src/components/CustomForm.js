@@ -1,15 +1,7 @@
 import React, { Component } from "react";
 import "./CustomForm.css";
 
-import {
-  ListGroup,
-  ListGroupItem,
-  FormGroup,
-  FormControl,
-  ControlLabel,
-  Row,
-  Col
-} from "react-bootstrap";
+import { FormControl, ControlLabel, Row, Col } from "react-bootstrap";
 
 export default class CustomForm extends Component {
   render() {

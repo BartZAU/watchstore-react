@@ -1,26 +1,13 @@
 import React, { Component } from "react";
 
 import "./Checkout.css";
-import NavMain from "./Nav";
 import CustomForm from "./CustomForm";
 import OrderList from "./OrderList";
 
-import {
-  Button,
-  Collapse,
-  Well,
-  Media,
-  Grid,
-  Row,
-  Col,
-  Glyphicon,
-  ListGroup,
-  ListGroupItem
-} from "react-bootstrap";
+import { Grid, Row, Col, ListGroup } from "react-bootstrap";
 
 export default class Checkout extends Component {
   render() {
-    // console.log(this.props);
     return (
       <div>
         <section className="py-5">

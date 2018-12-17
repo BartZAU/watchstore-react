@@ -4,7 +4,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import NavMain from "./components/Nav";
 import MainCarousel from "./components/MainCarousel";
 import WatchList from "./components/WatchList";
-import ShoppingCart from "./components/ShoppingCart";
 import Checkout from "./components/Checkout";
 
 import data from "./data/products.json";
@@ -43,17 +42,10 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // if (prevState.cart.length !== this.state.cart.length) {
-    //   const json = JSON.stringify(this.state.cart);
-    //   localStorage.setItem("cart", json);
-    // }
-
-    // if (prevState.cart.length !== this.state.cart.length ) {
     const jsonCart = JSON.stringify(this.state.cart);
     localStorage.setItem("cart", jsonCart);
     const jsonTotalPrice = JSON.stringify(this.state.totalPrice);
     localStorage.setItem("totalPrice", jsonTotalPrice);
-    // }
   }
 
   onTermSubmit = term => {
@@ -94,24 +86,13 @@ class App extends Component {
 
   handleRemoveCartItem = (removedItem, removedItemPrice) => {
     let index = this.state.cart.findIndex(el => el.item === removedItem);
-    // console.log(this.state.cart[index]);
-
-    // handleRemovePlayer = id => {
-    // 	this.setState(prevState => {
-    // 		return {
-    // 			players: prevState.players.filter(p => p.id !== id)
-    // 		};
-    // 	});
-    // };
-    // var words = [{id: 1, name: "bobo"},{id: 2, name: "gg"},{id: 3, name: "dale"}];
-    // const result = words.filter(word => word.id != words[0].id);
 
     this.setState(prevState => {
       let newCart = [...prevState.cart];
       newCart[index].quantity -= 1;
 
       if (this.state.cart[index].quantity < 1) {
-        newCart = newCart.filter(watch => watch.item != newCart[index].item);
+        newCart = newCart.filter(watch => watch.item !== newCart[index].item);
       }
 
       return {
@@ -127,13 +108,6 @@ class App extends Component {
       (total, current) => (total += current)
     );
 
-    // const totalPrice = this.state.cart.map(item => item.price * item.quantity);
-    // const result = totalPrice.reduce((total, current) => (total += current));
-    // // console.log(this.state.cart);
-    // console.log(result);
-
-    // console.log(this.state.totalPrice.toFixed(2));
-    // console.log(`number of items ${countOfItems}`);
     return (
       <BrowserRouter>
         <div className="App">

@@ -14,9 +14,6 @@ class WatchItem extends React.Component {
   };
 
   render() {
-    // console.log(this.props);
-    // console.log(this.props);
-
     return (
       <Col xs={6} md={4}>
         <Thumbnail

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
 
 import "./Nav.css";
 
@@ -40,10 +39,6 @@ class NavMain extends Component {
   };
 
   buttonFormSubmitClicked = e => {
-    // console.log("clicked");
-
-    // console.log(this.state.term);
-
     // call back function that will run when called from parent component
     this.props.onTermSubmit(this.state.term);
     this.setState({ term: "" });

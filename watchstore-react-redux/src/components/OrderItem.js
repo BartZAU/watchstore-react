@@ -2,18 +2,7 @@ import React from "react";
 
 import "./OrderItem.css";
 
-import {
-  Button,
-  Collapse,
-  Well,
-  Media,
-  Grid,
-  Row,
-  Col,
-  Glyphicon,
-  ListGroup,
-  ListGroupItem
-} from "react-bootstrap";
+import { Button, Media, Row, Col, ListGroupItem } from "react-bootstrap";
 
 class OrderItem extends React.Component {
   // will refractor to handle both remove and add item soon
