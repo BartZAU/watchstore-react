@@ -94,28 +94,31 @@ class App extends Component {
 
   handleRemoveCartItem = (removedItem, removedItemPrice) => {
     let index = this.state.cart.findIndex(el => el.item === removedItem);
+    // console.log(this.state.cart[index]);
 
-    if (index === -1) {
-      // handleRemovePlayer = id => {
-      // 	this.setState(prevState => {
-      // 		return {
-      // 			players: prevState.players.filter(p => p.id !== id)
-      // 		};
-      // 	});
-      // };
-      // var words = [{id: 1, name: "bobo"},{id: 2, name: "gg"},{id: 3, name: "dale"}];
-      // const result = words.filter(word => word.id != words[0].id);
-    } else {
-      this.setState(prevState => {
-        let newCart = [...prevState.cart];
-        newCart[index].quantity -= 1;
+    // handleRemovePlayer = id => {
+    // 	this.setState(prevState => {
+    // 		return {
+    // 			players: prevState.players.filter(p => p.id !== id)
+    // 		};
+    // 	});
+    // };
+    // var words = [{id: 1, name: "bobo"},{id: 2, name: "gg"},{id: 3, name: "dale"}];
+    // const result = words.filter(word => word.id != words[0].id);
 
-        return {
-          cart: newCart,
-          totalPrice: (prevState.totalPrice -= removedItemPrice)
-        };
-      });
-    }
+    this.setState(prevState => {
+      let newCart = [...prevState.cart];
+      newCart[index].quantity -= 1;
+
+      if (this.state.cart[index].quantity < 1) {
+        newCart = newCart.filter(watch => watch.item != newCart[index].item);
+      }
+
+      return {
+        cart: newCart,
+        totalPrice: (prevState.totalPrice -= removedItemPrice)
+      };
+    });
   };
 
   render() {
