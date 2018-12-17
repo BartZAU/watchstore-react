@@ -16,13 +16,20 @@ import {
 } from "react-bootstrap";
 
 class OrderItem extends React.Component {
-  handleClick = e => {
+  // will refractor to handle both remove and add item soon
+  handleClickAdd = e => {
     this.props.addCartItem(
       this.props.item,
       this.props.price,
       this.props.imgSrc,
       this.props.brand
     );
+  };
+
+  handleClickRemove = e => {
+    let removeItemPrice = this.props.quantity / this.props.price;
+
+    this.props.removeCartItem(this.props.item, removeItemPrice);
   };
 
   render() {
@@ -52,13 +59,17 @@ class OrderItem extends React.Component {
               </Row>
               <div className="btn-group">
                 <Button
-                  onClick={this.handleClick}
+                  onClick={this.handleClickAdd}
                   className="checkout-btn"
                   bsStyle="success"
                 >
                   <span className="inner-btn">+</span>
                 </Button>
-                <Button className="checkout-btn" bsStyle="danger">
+                <Button
+                  onClick={this.handleClickRemove}
+                  className="checkout-btn"
+                  bsStyle="danger"
+                >
                   <span className="inner-btn">-</span>
                 </Button>
               </div>

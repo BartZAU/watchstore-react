@@ -92,37 +92,31 @@ class App extends Component {
     }
   };
 
-  handleRemoveCartItem = removedItem => {
-    // check if already in cart
+  handleRemoveCartItem = (removedItem, removedItemPrice) => {
+    let index = this.state.cart.findIndex(el => el.item === removedItem);
 
-    console.log("remove item");
+    if (index === -1) {
+      // handleRemovePlayer = id => {
+      // 	this.setState(prevState => {
+      // 		return {
+      // 			players: prevState.players.filter(p => p.id !== id)
+      // 		};
+      // 	});
+      // };
+      // var words = [{id: 1, name: "bobo"},{id: 2, name: "gg"},{id: 3, name: "dale"}];
+      // const result = words.filter(word => word.id != words[0].id);
+    } else {
+      this.setState(prevState => {
+        let newCart = [...prevState.cart];
+        newCart[index].quantity -= 1;
+        newCart[index].price -= removedItemPrice;
 
-    // let index = this.state.cart.findIndex(el => el.item === addedItem);
-
-    // if (index === -1) {
-    //   this.setState(prevState => ({
-    //     cart: [
-    //       ...prevState.cart,
-    //       {
-    //         item: addedItem,
-    //         price: addedItemPrice,
-    //         quantity: 1,
-    //         imgSrc: imgSrc,
-    //         brand: brand
-    //       }
-    //     ],
-    //     totalPrice: (prevState.totalPrice += addedItemPrice)
-    //   }));
-    // } else {
-    //   this.setState(prevState => {
-    //     let newCart = [...prevState.cart];
-    //     newCart[index].quantity += 1;
-    //     return {
-    //       cart: newCart,
-    //       totalPrice: (prevState.totalPrice += addedItemPrice)
-    //     };
-    //   });
-    // }
+        return {
+          cart: newCart,
+          totalPrice: (prevState.totalPrice -= removedItemPrice)
+        };
+      });
+    }
   };
 
   render() {
@@ -170,7 +164,7 @@ class App extends Component {
             render={() => (
               <Checkout
                 cart={this.state.cart}
-                // removeCartItem={this.handleRemoveCartItem}
+                removeCartItem={this.handleRemoveCartItem}
                 addCartItem={this.handleAddCartItem}
               />
             )}
