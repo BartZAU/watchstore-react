@@ -1,4 +1,7 @@
 import React from "react";
+
+import "./OrderItem.css";
+
 import {
   Button,
   Collapse,
@@ -30,6 +33,14 @@ const OrderItem = props => {
               <Col md={8}>Qty: {props.quantity} </Col>
               <Col md={8}>Price: {props.quantity * props.price}</Col>
             </Row>
+            <div className="btn-group">
+              <Button className="checkout-btn" bsStyle="success">
+                <span className="inner-btn">+</span>
+              </Button>
+              <Button className="checkout-btn" bsStyle="danger">
+                <span className="inner-btn">-</span>
+              </Button>
+            </div>
           </Media.Body>
         </Media>
       </ListGroupItem>

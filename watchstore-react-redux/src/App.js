@@ -92,6 +92,39 @@ class App extends Component {
     }
   };
 
+  handleRemoveCartItem = removedItem => {
+    // check if already in cart
+
+    console.log("remove item");
+
+    // let index = this.state.cart.findIndex(el => el.item === addedItem);
+
+    // if (index === -1) {
+    //   this.setState(prevState => ({
+    //     cart: [
+    //       ...prevState.cart,
+    //       {
+    //         item: addedItem,
+    //         price: addedItemPrice,
+    //         quantity: 1,
+    //         imgSrc: imgSrc,
+    //         brand: brand
+    //       }
+    //     ],
+    //     totalPrice: (prevState.totalPrice += addedItemPrice)
+    //   }));
+    // } else {
+    //   this.setState(prevState => {
+    //     let newCart = [...prevState.cart];
+    //     newCart[index].quantity += 1;
+    //     return {
+    //       cart: newCart,
+    //       totalPrice: (prevState.totalPrice += addedItemPrice)
+    //     };
+    //   });
+    // }
+  };
+
   render() {
     const arrayOfQuantities = this.state.cart.map(item => item.quantity);
     const countOfCartItems = arrayOfQuantities.reduce(
