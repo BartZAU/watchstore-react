@@ -109,7 +109,6 @@ class App extends Component {
       this.setState(prevState => {
         let newCart = [...prevState.cart];
         newCart[index].quantity -= 1;
-        newCart[index].price -= removedItemPrice;
 
         return {
           cart: newCart,

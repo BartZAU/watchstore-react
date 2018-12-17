@@ -27,9 +27,7 @@ class OrderItem extends React.Component {
   };
 
   handleClickRemove = e => {
-    let removeItemPrice = this.props.quantity / this.props.price;
-
-    this.props.removeCartItem(this.props.item, removeItemPrice);
+    this.props.removeCartItem(this.props.item, this.props.price);
   };
 
   render() {
@@ -53,8 +51,9 @@ class OrderItem extends React.Component {
               <Row className="show-grid">
                 <Col md={8}>Item: {this.props.item}</Col>
                 <Col md={8}>Qty: {this.props.quantity} </Col>
+                <Col md={8}>PPU Price: ${this.props.price} </Col>
                 <Col md={8}>
-                  Price: {this.props.quantity * this.props.price}
+                  Price: ${this.props.quantity * this.props.price}
                 </Col>
               </Row>
               <div className="btn-group">
