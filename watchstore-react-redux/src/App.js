@@ -167,7 +167,13 @@ class App extends Component {
           />
           <Route
             path="/checkout"
-            render={() => <Checkout cart={this.state.cart} />}
+            render={() => (
+              <Checkout
+                cart={this.state.cart}
+                // removeCartItem={this.handleRemoveCartItem}
+                addCartItem={this.handleAddCartItem}
+              />
+            )}
           />
         </div>
       </BrowserRouter>

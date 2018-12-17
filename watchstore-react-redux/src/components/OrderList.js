@@ -26,6 +26,7 @@ const OrderList = props => {
           price={watch.price}
           quantity={watch.quantity}
           brand={watch.brand}
+          addCartItem={props.addCartItem}
         />
       ))}
     </React.Fragment>

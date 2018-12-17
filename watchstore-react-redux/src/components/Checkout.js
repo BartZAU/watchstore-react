@@ -80,7 +80,10 @@ export default class Checkout extends Component {
 									</ListGroup> */}
 
                   <ListGroup>
-                    <OrderList cart={this.props.cart} />
+                    <OrderList
+                      cart={this.props.cart}
+                      addCartItem={this.props.addCartItem}
+                    />
                   </ListGroup>
                 </div>
               </Col>
