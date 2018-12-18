@@ -8,6 +8,7 @@ import { Grid, Row, Col, ListGroup } from "react-bootstrap";
 
 export default class Checkout extends Component {
   render() {
+    console.log(this.props);
     return (
       <div>
         <section className="py-5">
@@ -60,22 +61,20 @@ export default class Checkout extends Component {
                       <strong>Subtotal: </strong>
                     </p>
                     <p>
-                      <strong>Tax: </strong>
+                      <strong>GST fee: </strong>
                     </p>
-                    <p>
-                      <strong>Total: </strong>
-                    </p>
+                    <h3 style={{ marginTop: "0" }}>Total:</h3>
                   </div>
                   <div className="checkout-summary-prices">
                     <p>
-                      <strong>0.00</strong>
+                      <strong>${this.props.totalPrice}</strong>
                     </p>
                     <p>
                       <strong>0.00</strong>
                     </p>
-                    <p>
+                    <h3 style={{ marginTop: "0" }}>
                       <strong>0.00</strong>
-                    </p>
+                    </h3>
                   </div>
                 </div>
               </Col>

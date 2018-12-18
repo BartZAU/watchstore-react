@@ -143,6 +143,7 @@ class App extends Component {
                 cart={this.state.cart}
                 removeCartItem={this.handleRemoveCartItem}
                 addCartItem={this.handleAddCartItem}
+                totalPrice={this.state.totalPrice}
               />
             )}
           />
