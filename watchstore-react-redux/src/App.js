@@ -135,6 +135,7 @@ class App extends Component {
               </React.Fragment>
             )}
           />
+
           <Route
             path="/checkout"
             render={() => (
