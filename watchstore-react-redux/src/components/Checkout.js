@@ -53,7 +53,7 @@ export default class Checkout extends Component {
                 </div>
               </Col>
 
-              <Col xs={12}>
+              <Col xs={4}>
                 <div className="checkout-summary">
                   <h5 className="sub-heading">PAYMENT SUMMARY</h5>
                 </div>

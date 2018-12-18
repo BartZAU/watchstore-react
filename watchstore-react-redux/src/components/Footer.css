@@ -1,5 +1,9 @@
+.footer-wrapper {
+  background: #428bca;
+}
+
 .footer-content {
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   padding-left: 15px;
 }
@@ -15,11 +19,37 @@
   margin-bottom: 5px;
 }
 
+.footer-brand-list li a {
+  padding: 3px;
+}
+
+.footer-brand-list li a:hover {
+  color: #4e4e4e;
+}
+
+.footer-content {
+  background: #428bca;
+  color: #f8f8ff;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: #f8f8ff;
+}
+
+.footer-content h5 {
+  padding-bottom: 1rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid #fff;
+  width: 340px;
+}
+
 .footer-copyright {
   text-align: center;
   font-size: 13px;
   color: #f8f8ff;
   background: #232b2b;
+  padding: 2rem 0;
 }
 
 .footer-copyright a {
