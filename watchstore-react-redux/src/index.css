@@ -1,18 +1,15 @@
 :root {
+  --primary-color: #428bca;
   --primary-dark-text: #4e4e4e;
-  --white-background: #fff;
+  --white-background: #fdfdfd;
 }
 /* new test */
 body {
   color: var(--primary-dark-text);
+  background: var(--white-background);
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }

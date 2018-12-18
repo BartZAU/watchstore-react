@@ -21,10 +21,13 @@ class WatchItem extends React.Component {
           src={this.props.imgSrc}
           alt={this.props.name}
         >
-          <span>{` ${this.props.name}`}</span>
-          <div className="item-details">
-            <p>{this.props.description}</p>
-            <p>{`$${this.props.price.toFixed(2)}`}</p>
+          {/* <span>{` ${this.props.name}`}</span> */}
+          <div className="item-details-wrapper">
+            <p className="item-name">{this.props.name}</p>
+            <p className="item-price">
+              <strong>{`$${this.props.price.toFixed(2)}`}</strong>{" "}
+            </p>
+            <p className="item-details">{this.props.description}</p>
           </div>
           {this.props.isInCart ? (
             <img
@@ -33,8 +36,12 @@ class WatchItem extends React.Component {
               alt="cart"
             />
           ) : null}
-          <Button onClick={this.handleClick} bsStyle="default">
-            Add to cart
+          <Button
+            className="add-to-cart-btn"
+            onClick={this.handleClick}
+            bsStyle="primary"
+          >
+            ADD TO CART
           </Button>
         </Thumbnail>
       </Col>
