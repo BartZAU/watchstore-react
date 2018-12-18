@@ -21,7 +21,6 @@ class WatchItem extends React.Component {
           src={this.props.imgSrc}
           alt={this.props.name}
         >
-          {/* <span>{` ${this.props.name}`}</span> */}
           <div className="item-details-wrapper">
             <p className="item-name">{this.props.name}</p>
             <p className="item-price">

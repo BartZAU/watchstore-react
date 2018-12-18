@@ -166,7 +166,6 @@ class NavMain extends Component {
               }
             >
               <NavItem eventKey={2} href="/checkout" className="nav-item">
-                {/* Cart <span>$0.00</span> <i className="fas fa-shopping-cart" /> */}
                 {!this.props.itemsInCartBoolean ? `Cart` : ` Checkout`}
                 <i
                   style={{

@@ -5,6 +5,7 @@ import NavMain from "./components/Nav";
 import MainCarousel from "./components/MainCarousel";
 import WatchList from "./components/WatchList";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 
 import data from "./data/products.json";
 
@@ -36,9 +37,7 @@ class App extends Component {
       if (cart) {
         this.setState(() => ({ cart: cart, totalPrice: totalPrice }));
       }
-    } catch (error) {
-      // do nothing
-    }
+    } catch (error) {}
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -51,8 +50,6 @@ class App extends Component {
   onTermSubmit = term => {
     this.setState({ term: term });
   };
-
-  // need to add a remove item from cart
 
   handleAddCartItem = (addedItem, addedItemPrice, imgSrc, brand) => {
     // check if already in cart
@@ -125,6 +122,7 @@ class App extends Component {
             render={() => (
               <React.Fragment>
                 <MainCarousel />
+
                 <WatchList
                   cart={this.state.cart}
                   searchTerm={this.state.term}
@@ -147,6 +145,7 @@ class App extends Component {
               />
             )}
           />
+          <Footer />
         </div>
       </BrowserRouter>
     );

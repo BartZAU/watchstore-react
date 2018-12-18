@@ -8,9 +8,8 @@ import { Grid, Row, Col, ListGroup } from "react-bootstrap";
 
 export default class Checkout extends Component {
   render() {
-    console.log(this.props);
-
     const taxes = this.props.totalPrice * 0.1;
+    const estimatedTotal = this.props.totalPrice + taxes;
 
     return (
       <div>
@@ -83,8 +82,8 @@ export default class Checkout extends Component {
                     </p>
                     <h3 style={{ marginTop: "0" }}>
                       <strong>
-                        {this.props.estimatedTotal
-                          ? `$${this.props.estimatedTotal.toFixed(2)}`
+                        {estimatedTotal
+                          ? `$${estimatedTotal.toFixed(2)}`
                           : `$0.00`}
                       </strong>
                     </h3>

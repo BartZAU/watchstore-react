@@ -1,0 +1,29 @@
+.footer-content {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+  padding-left: 15px;
+}
+
+.footer-brand-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-brand-list li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 13px;
+  color: #f8f8ff;
+  background: #232b2b;
+}
+
+.footer-copyright a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #fdfdfd;
+}
