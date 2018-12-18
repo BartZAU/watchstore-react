@@ -9,6 +9,9 @@ import { Grid, Row, Col, ListGroup } from "react-bootstrap";
 export default class Checkout extends Component {
   render() {
     console.log(this.props);
+
+    const taxes = this.props.totalPrice * 0.1;
+
     return (
       <div>
         <section className="py-5">
@@ -67,13 +70,23 @@ export default class Checkout extends Component {
                   </div>
                   <div className="checkout-summary-prices">
                     <p>
-                      <strong>${this.props.totalPrice}</strong>
+                      <strong>
+                        {this.props.totalPrice
+                          ? `$${this.props.totalPrice.toFixed(2)}`
+                          : `$0.00`}
+                      </strong>
                     </p>
                     <p>
-                      <strong>0.00</strong>
+                      <strong>
+                        {taxes ? `$${taxes.toFixed(2)}` : `$0.00`}
+                      </strong>
                     </p>
                     <h3 style={{ marginTop: "0" }}>
-                      <strong>0.00</strong>
+                      <strong>
+                        {this.props.estimatedTotal
+                          ? `$${this.props.estimatedTotal.toFixed(2)}`
+                          : `$0.00`}
+                      </strong>
                     </h3>
                   </div>
                 </div>
