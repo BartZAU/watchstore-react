@@ -60,7 +60,7 @@ const Footer = () => {
         </Row>
       </Grid>
 
-      <div class="footer-copyright">&copy; 2018 Little Horses Studio</div>
+      <div className="footer-copyright">&copy; 2018 Little Horses Studio</div>
     </footer>
   );
 };

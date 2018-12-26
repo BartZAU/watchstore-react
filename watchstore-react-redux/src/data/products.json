@@ -8,7 +8,7 @@
         {
           "id": 1,
           "brand": "Franck Muller",
-          "name": "Vanguard 8880",
+          "name": "bbbVanguard 8880",
           "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae cum, tenetur cumque sapiente, officia harum corporis odit.",
           "price": 35,
           "imgSrc": "fm_8880.jpg"
@@ -16,7 +16,7 @@
         {
           "id": 2,
           "brand": "Franck Muller",
-          "name": "Vanguard 8888",
+          "name": "eeeeVanguard 8888",
           "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae cum, tenetur cumque sapiente, officia harum corporis odit.",
           "price": 50,
           "imgSrc": "fm_8888.jpg"
@@ -24,7 +24,7 @@
         {
           "id": 3,
           "brand": "Franck Muller",
-          "name": "Vanguard 50",
+          "name": "cccVanguard 50",
           "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae cum, tenetur cumque sapiente, officia harum corporis odit.",
           "price": 60,
           "imgSrc": "fm_vanguard_yachting.jpg"
@@ -32,9 +32,9 @@
         {
           "id": 4,
           "brand": "Franck Muller",
-          "name": "Vanguard YT75",
+          "name": "aaVanguard YT75",
           "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae cum, tenetur cumque sapiente, officia harum corporis odit.",
-          "price": 60,
+          "price": 100,
           "imgSrc": "fm_v50.jpg"
         }
       ]

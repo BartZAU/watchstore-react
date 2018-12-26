@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Col, Thumbnail, Button } from "react-bootstrap";
 
 import "./WatchItem.css";
