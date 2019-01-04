@@ -1,0 +1,8 @@
+.dropdown_menu {
+  color: #9d9d9d;
+  background: #fff !important;
+}
+
+.dropdown_menu:hover {
+  color: #fff;
+}

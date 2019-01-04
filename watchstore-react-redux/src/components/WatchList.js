@@ -47,10 +47,10 @@ export default class WatchList extends Component {
         />
         <Grid>
           <Sort sortKey={"NAME"} onSort={this.onSort} activeSortKey={sortKey}>
-            sort by Name
+            Name
           </Sort>
           <Sort sortKey={"PRICE"} onSort={this.onSort} activeSortKey={sortKey}>
-            sort by Price
+            Price
           </Sort>
           <Row className="watch-list show-grid">
             {reverseSortedList
