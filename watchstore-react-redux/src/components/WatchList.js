@@ -46,12 +46,21 @@ export default class WatchList extends Component {
           brandHeaderinfo={this.props.headerInfo}
         />
         <Grid>
-          <Sort sortKey={"NAME"} onSort={this.onSort} activeSortKey={sortKey}>
-            Name
-          </Sort>
-          <Sort sortKey={"PRICE"} onSort={this.onSort} activeSortKey={sortKey}>
-            Price
-          </Sort>
+          <div className="button-group">
+            <Sort sortKey={"NAME"} onSort={this.onSort} activeSortKey={sortKey}>
+              Name
+            </Sort>
+            <Sort
+              sortKey={"PRICE"}
+              onSort={this.onSort}
+              activeSortKey={sortKey}
+            >
+              Price
+            </Sort>
+          </div>
+        </Grid>
+
+        <Grid>
           <Row className="watch-list show-grid">
             {reverseSortedList
               .filter(watch =>

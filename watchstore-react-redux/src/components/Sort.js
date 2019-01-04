@@ -1,41 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { sortBy } from "lodash";
-import {
-  Button,
-  InputGroup,
-  FormGroup,
-  FormControl,
-  DropdownButton,
-  MenuItem
-} from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 import styles from "./Sort.module.css";
 
-const Sort = ({ sortKey, onSort, children }) => {
-  return (
-    <FormGroup>
-      <DropdownButton
-        componentClass={InputGroup.Button}
-        id="input-dropdown-addon"
-        title="Sort by"
-      >
-        <MenuItem
-          className={styles.dropdown_menu}
-          key={sortKey}
-          onSelect={() => onSort(sortKey)}
-        >
-          {children}
-        </MenuItem>
-      </DropdownButton>
-    </FormGroup>
-  );
-};
+const Sort = ({ sortKey, children, onSort }) => (
+  <Button onClick={() => onSort(sortKey)} className={styles.sort_button}>
+    {children}
+    <i
+      style={{
+        fontSize: "14px",
+        paddingLeft: "2.5px",
+        paddingRight: "2.5px"
+      }}
+      className="fas fa-shopping-cart "
+    />
+  </Button>
+);
 
 export default Sort;
-
-// const Sort = ({ sortKey, onSort, children }) => (
-//   <Button onClick={() => onSort(sortKey)} className="sort-button">
-//     {children}
-// 	</Button>
-// );

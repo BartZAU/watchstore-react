@@ -4,6 +4,14 @@
   padding-bottom: 5rem;
 }
 
+.button-group {
+  float: right;
+  padding-bottom: 7px;
+}
+
+.button-group:last-child {
+  margin-right: 15px;
+}
 /* .thumbnail img {
   height: 150px !important;
 } */
